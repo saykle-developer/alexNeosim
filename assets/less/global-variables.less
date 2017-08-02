@@ -1,0 +1,49 @@
+/*
+=====================
+Colors
+=====================
+*/
+@color-white: #fff;
+@color-black: #000;
+@color-grey: #1e1e1e;
+/*
+=====================
+Fonts
+=====================
+*/
+
+/*
+=====================
+Classes
+=====================
+*/
+
+/*
+=====================
+Mixin
+=====================
+*/
+.transition(@time: .2s, @timing: ease, @obj: all) {
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  transition: @arguments;
+}
+
+.link-style(@color: @color-black, @underline: none) {
+  color: @color;
+  text-decoration: @underline;
+}
+
+.center(@object) when (@object = image) {
+  margin: 0 auto;
+}
+
+.center(@object) when (@object = text) {
+  text-align: center;
+}
+
+.background(@url, @size, @x: center, @y: center) {
+  background: url(@url) no-repeat @x @y;
+  -webkit-background-size: @size;
+  background-size: @size;
+}
